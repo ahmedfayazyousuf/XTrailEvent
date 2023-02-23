@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import {useRef} from 'react';
 import axios from "axios";
 
-const Upload = () =>{
+const QRScan = () =>{
 
     const [file, setFile] = useState("");
     const [count, setCount] = useState(0);
@@ -135,4 +135,4 @@ const Upload = () =>{
     )
 }
 
-export default Upload
+export default QRScan

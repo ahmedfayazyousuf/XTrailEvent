@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import { useEffect } from "react";
 
-const  Admin = () =>{
+const  Home = () =>{
     const [data, setData] = useState([]);
     function toDataURL(url) {
         return fetch(url)
@@ -91,4 +91,4 @@ return(
 )
 }
 
-export default Admin
+export default Home
