@@ -11,7 +11,19 @@ const QRScan = () =>{
     const [file, setFile] = useState("");
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
-    const buttonRef = useRef(null); 
+    const buttonRef = useRef(null);
+
+    function handleScan  (data)  {    
+      if(data!=null){  
+        console.log(data.text)
+          if(data.text === '1'){
+            document.getElementById('modal').style.visibility = 'visible';
+            document.getElementById('back').style.visibility = 'visible';
+            
+          }
+      }
+    };
+
 
     function handleChange(event) {
       setCount(count+event.target.files.length)
@@ -121,17 +133,30 @@ const QRScan = () =>{
  
           </div>
 
-
-          <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', height:'50%'}}>
-            <button ref={buttonRef} id="signup" name="signup" type="submit" className="grab" style={{width:"230px",height: "50px", marginBottom: '40px', borderRadius: '10px', padding: '10px', color: 'black', backgroundColor: 'white', cursor: 'grab'}} onClick={sendData}>UPLOAD</button>
-            
-          <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
-                    <img src="https://firebasestorage.googleapis.com/v0/b/assetuploadformbuilder.appspot.com/o/images%2Fgetreadywhite.png?alt=media&token=e12d79b3-89f3-4550-971d-b5cd38152986" alt="Logo" style={{width: '20vh', marginTop: '5px', marginBottom: '10px'}}/>
-                </div>
-          </div>
-
-          
+        <div id="modal" style={{position:'absolute', height:'400px', border:'2px solid',zIndex:'1000', width:'500px', background:'white', display:'flex', justifyContent:'center', alignItems:'center', visibility:'hidden'}}>
+          <button>Click Here</button>
         </div>
+
+        <div id="back" style={{height:'100vh', width:'100vw', position:'absolute', background:'black', opacity:'0.5', zIndex:'999', visibility:'hidden'}}>
+
+        </div>
+        <div className="scan">
+
+        </div>
+        <div className="scanframe" style={{zIndex:'1'}}>
+        <QrReader
+            constraints = {{facingMode: 'environment'} }
+            
+            //style={previewStyle}
+            onError={handleError}
+            onResult={handleScan}
+            videoStyle={{height:'100%',width:'97%',padding:0,left:4,top:0,alignSelf:'center'}}
+            videoContainerStyle={{height:'100%', width:'100%',left:0,padding:0}}
+            containerStyle={{height:'80%',left:'15%',width:'70%',top:0}}
+
+        />
+        </div>
+    </div>
     )
 }
 
