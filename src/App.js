@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/Registration" element={<Registration />} />
-          <Route exact path="/Instruction" element={<Instruction />} />
+          <Route exact path="/Instructions" element={<Instruction />} />
           <Route exact path="/QRScan" element={<QRScan />} />
           <Route exact path="/ThankYou" element={<ThankYou />} />
         </Routes>
