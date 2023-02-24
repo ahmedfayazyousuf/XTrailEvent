@@ -16,8 +16,15 @@ const QRScan = () =>{
     const navigate = useNavigate();
     const buttonRef = useRef(null);
 
-    function handleScan  (data)  {      
- 
+    function handleScan  (data)  {    
+      if(data!=null){  
+        console.log(data.text)
+          if(data.text === '1'){
+            document.getElementById('modal').style.visibility = 'visible';
+            document.getElementById('back').style.visibility = 'visible';
+            
+          }
+      }
     };
 
 
@@ -31,11 +38,11 @@ const QRScan = () =>{
     return(
       <div className="qrscan">
 
-        <div style={{position:'absolute', height:'400px', border:'2px solid',zIndex:'1000', width:'500px', background:'white', display:'flex', justifyContent:'center', alignItems:'center'}}>
-
+        <div id="modal" style={{position:'absolute', height:'400px', border:'2px solid',zIndex:'1000', width:'500px', background:'white', display:'flex', justifyContent:'center', alignItems:'center', visibility:'hidden'}}>
+          <button>Click Here</button>
         </div>
 
-        <div style={{height:'100vh', width:'100vw', position:'absolute', background:'black', opacity:'0.5', display:'none'}}>
+        <div id="back" style={{height:'100vh', width:'100vw', position:'absolute', background:'black', opacity:'0.5', zIndex:'999', visibility:'hidden'}}>
 
         </div>
         <div className="scan">
@@ -44,7 +51,7 @@ const QRScan = () =>{
         <div className="scanframe" style={{zIndex:'1'}}>
         <QrReader
             constraints = {{facingMode: 'environment'} }
-            scanDelay={5000}
+            
             //style={previewStyle}
             onError={handleError}
             onResult={handleScan}
