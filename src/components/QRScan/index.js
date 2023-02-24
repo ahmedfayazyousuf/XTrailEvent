@@ -13,6 +13,7 @@ const QRScan = () =>{
 
     const [file, setFile] = useState("");
     const [count, setCount] = useState(0);
+    const [map, setMap] = useState("");
     const navigate = useNavigate();
     const buttonRef = useRef(null);
 
@@ -20,8 +21,38 @@ const QRScan = () =>{
       if(data!=null){  
         console.log(data.text)
           if(data.text === '1'){
+            document.getElementById('hide').style.visibility = 'hidden'
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
+            
+          }
+
+          if(data.text === '2'){
+            document.getElementById('hide').style.visibility = 'hidden'
+            document.getElementById('modal').style.visibility = 'visible';
+            document.getElementById('back').style.visibility = 'visible';
+            
+          }
+
+          if(data.text === '3'){
+            document.getElementById('hide').style.visibility = 'hidden'
+            document.getElementById('modal').style.visibility = 'visible';
+            document.getElementById('back').style.visibility = 'visible';
+            
+          }
+
+          if(data.text === '4'){
+            document.getElementById('hide').style.visibility = 'hidden'
+            document.getElementById('modal').style.visibility = 'visible';
+            document.getElementById('back').style.visibility = 'visible';
+            
+          }
+
+          if(data.text === '5'){
+            document.getElementById('hide').style.visibility = 'hidden'
+            document.getElementById('modal').style.visibility = 'visible';
+            document.getElementById('back').style.visibility = 'visible';
+            setCount('5')
             
           }
       }
@@ -34,12 +65,31 @@ const QRScan = () =>{
       console.error(err);
     };
 
+    function Handlesubmit(){
+      window.open(map, '_blank', 'noreferrer')
+      document.getElementById('hide').style.visibility = 'visible'
+      // document.getElementById('modal').style.visibility = 'hidden';
+      // document.getElementById('back').style.visibility = 'hidden';
+    }
+
+    function Close(){
+
+      if(count === '5'){
+        
+      }
+      document.getElementById('modal').style.visibility = 'hidden';
+      document.getElementById('back').style.visibility = 'hidden';
+      document.getElementById('hide').style.visibility = 'hidden'
+
+    }
+
 
     return(
       <div className="qrscan">
 
         <div id="modal" style={{position:'absolute', height:'400px', border:'2px solid',zIndex:'1000', width:'500px', background:'white', display:'flex', justifyContent:'center', alignItems:'center', visibility:'hidden'}}>
-          <button>Click Here</button>
+          <button onClick={Handlesubmit}>Click Here</button>
+          <button id="hide" style={{visibility:'hidden'}} onClick={Close}>Scan Next Qr</button>
         </div>
 
         <div id="back" style={{height:'100vh', width:'100vw', position:'absolute', background:'black', opacity:'0.5', zIndex:'999', visibility:'hidden'}}>
