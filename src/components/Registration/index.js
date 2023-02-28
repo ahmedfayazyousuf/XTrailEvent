@@ -1,7 +1,31 @@
 import { Link } from "react-router-dom";
 import nislogo from '../Z_Styles/nislogo.png'
+import firebase from '../../firbase';
+import { useNavigate } from 'react-router-dom';
 import Tick from './tickicon.png'
+
 const Registration = () =>{
+
+  const navigate = useNavigate();
+
+  function Handlesubmit() {
+    const Users = firebase.firestore().collection("Users");
+    const Email = document.getElementById("email").value;
+    const Number = document.getElementById("no").value;
+    const Name = document.getElementById("Name").value;
+
+    Users.add({
+      Name:Name,
+      Email:Email,
+      Number:Number,
+      time: firebase.firestore.FieldValue.serverTimestamp()
+
+  }).then((doc)=>{
+    
+      navigate('/instructions',{state:{id:doc.id}})
+  })
+
+  }
 
     return(
       <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "100vh", justifyContent:"center", alignItems:"center"}}>
@@ -22,7 +46,7 @@ const Registration = () =>{
               <input type="email" placeholder='EMAIL' id='email' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
           </div>
 
-
+ 
           <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
                   <input type="number" placeholder='MOBILE (971 xx xxx xxxx)' id='no' style={{background:"transparent", borderRadius: '10px', border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white' }} />
           </div>
@@ -36,10 +60,10 @@ const Registration = () =>{
           </div>
 
           <div style={{display: 'flex', width: '100%', flexDirection: 'row', justifyContent: 'center'}}>   
-            <Link to={{pathname:"/instructions"}}>     
-              <button style={{cursor: 'grab', width: '150px', height: '35px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: 'black', color: 'white'}} variant="contained">SUBMIT</button>
-            </Link>
-            </div>
+ 
+            <button style={{cursor: 'grab', width: '150px', height: '35px', padding: '5px', border: 'none', borderRadius: '10px', marginLeft: '20px', backgroundColor: 'black', color: 'white'}} onClick={Handlesubmit} variant="contained">SUBMIT</button>
+
+          </div>
 
         </div>
       </div>

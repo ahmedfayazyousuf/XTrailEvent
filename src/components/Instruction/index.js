@@ -1,8 +1,20 @@
 import { Link } from "react-router-dom";
 import xtrail from '../Z_Styles/xtrail.png'
 import nislogo from '../Z_Styles/nislogo.png'
+import { useNavigate } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 const  Instruction = () =>{
+
+    const navigate = useNavigate();
+    const location = useLocation();
+
+
+    function Handlesubmit(){
+        navigate('/qrscan',{state:{id:location.state.id}})
+        
+    }
+
 return(
     <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', height:'100vh'}}>
 
@@ -16,9 +28,9 @@ return(
                 <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
             </div>
           
-            <Link to={{pathname:"/qrscan"}}>
-                <button type="submit" style={{width:"180px", borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}}>START</button>
-            </Link>
+
+            <button type="submit" style={{width:"180px", borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={Handlesubmit}>START</button>
+
 
             <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-end', width: '100%'}}>
                 <img style={{minWidth: '100px', maxWidth: '250px', margin: '20px'}} src={xtrail} alt="tick"/>

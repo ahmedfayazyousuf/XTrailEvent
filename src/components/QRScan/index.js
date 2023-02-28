@@ -7,23 +7,35 @@ import {useRef} from 'react';
 import axios from "axios";
 import {QrReader} from "react-qr-reader";
 import './qrscan.css'
+import {useLocation} from 'react-router-dom';
+
 
 
 const QRScan = () =>{
 
-    const [file, setFile] = useState("");
+    const [c, setC] = useState(0);
     const [count, setCount] = useState(0);
     const [map, setMap] = useState("");
     const navigate = useNavigate();
     const buttonRef = useRef(null);
+    const location = useLocation();
 
-    function handleScan  (data)  {    
+    function handleScan  (data)  {   
+
+      const Users = firebase.firestore().collection("Users");
+
       if(data!=null){  
         console.log(data.text)
           if(data.text === '1'){
             document.getElementById('hide').style.visibility = 'hidden'
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
+
+            if(c===0){
+              Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
+              
+            }
+            
             
           }
 
@@ -31,6 +43,10 @@ const QRScan = () =>{
             document.getElementById('hide').style.visibility = 'hidden' 
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
+            if(c===0){
+              Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
+              
+            }
             
           }
 
@@ -38,6 +54,10 @@ const QRScan = () =>{
             document.getElementById('hide').style.visibility = 'hidden'
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
+            if(c===0){
+              Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
+              
+            }
             
           }
 
@@ -45,13 +65,23 @@ const QRScan = () =>{
             document.getElementById('hide').style.visibility = 'hidden'
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
+            if(c===0){
+              Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
+              
+            }
             
           }
 
           if(data.text === '5'){
-            document.getElementById('hide').style.visibility = 'hidden'
+            document.getElementById('hide').style.visibility = 'visible'
+            document.getElementById('hide').innerHTML = 'End Ride'
+            document.getElementById('location').style.visibility = 'hidden'
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
+            if(c===0){
+              Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
+              
+            }
             setCount('5')
             
           }
@@ -93,7 +123,7 @@ const QRScan = () =>{
       <div className="qrscan">
 
         <div id="modal" style={{position:'absolute', height:'250px', border:'2px solid',zIndex:'1000', width:'300px', background:'white', display:'flex', justifyContent:'center', alignItems:'center', visibility:'hidden',borderRadius:'10px'}}>
-          <button style={{background:'transparent', borderRadius:'10px', width:'90px', height:'50px', marginRight:'15px', border:'2px solid'}} onClick={Handlesubmit}>View Location</button>
+          <button id="location" style={{background:'transparent', borderRadius:'10px', width:'90px', height:'50px', marginRight:'15px', border:'2px solid'}} onClick={Handlesubmit}>View Location</button>
           <button  id="hide" style={{visibility:'hidden',background:'transparent', borderRadius:'10px', width:'100px', height:'50px', border:'2px solid'}} onClick={Close}>Scan Next Qr</button>
         </div>
 

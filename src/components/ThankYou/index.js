@@ -7,7 +7,7 @@ const ThankYou = () =>{
         </div> */}
 
         <div style={{ width: '100vw'}}>
-          <h1 style={{color: '#000', fontSize:'100px'}}>Thank You!</h1>
+          <h1 style={{color: '#000', fontSize:'100px'}}>Congratulations!</h1>
         </div>     
       </div>
     )
