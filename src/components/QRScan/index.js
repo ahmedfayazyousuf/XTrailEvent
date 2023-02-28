@@ -44,7 +44,7 @@ const QRScan = () =>{
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
             if(c===0){
-              Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
+              Users.doc(location.state.id).update({Location2:firebase.firestore.FieldValue.serverTimestamp()})
               
             }
             
@@ -55,7 +55,7 @@ const QRScan = () =>{
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
             if(c===0){
-              Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
+              Users.doc(location.state.id).update({Location3:firebase.firestore.FieldValue.serverTimestamp()})
               
             }
             
@@ -66,7 +66,7 @@ const QRScan = () =>{
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
             if(c===0){
-              Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
+              Users.doc(location.state.id).update({Location4:firebase.firestore.FieldValue.serverTimestamp()})
               
             }
             
@@ -79,7 +79,7 @@ const QRScan = () =>{
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
             if(c===0){
-              Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
+              Users.doc(location.state.id).update({Location5:firebase.firestore.FieldValue.serverTimestamp()})
               
             }
             setCount('5')
