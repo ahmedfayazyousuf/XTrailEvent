@@ -28,7 +28,7 @@ const QRScan = () =>{
           }
 
           if(data.text === '2'){
-            document.getElementById('hide').style.visibility = 'hidden'
+            document.getElementById('hide').style.visibility = 'hidden' 
             document.getElementById('modal').style.visibility = 'visible';
             document.getElementById('back').style.visibility = 'visible';
             
@@ -68,6 +68,10 @@ const QRScan = () =>{
     function Handlesubmit(){
       window.open(map, '_blank', 'noreferrer')
       document.getElementById('hide').style.visibility = 'visible'
+      if(count === '5'){
+        document.getElementById('hide').innerHTML = 'End Ride'
+      }
+      
       // document.getElementById('modal').style.visibility = 'hidden';
       // document.getElementById('back').style.visibility = 'hidden';
     }
@@ -75,8 +79,9 @@ const QRScan = () =>{
     function Close(){
 
       if(count === '5'){
-        
+        navigate('/ThankYou')
       }
+
       document.getElementById('modal').style.visibility = 'hidden';
       document.getElementById('back').style.visibility = 'hidden';
       document.getElementById('hide').style.visibility = 'hidden'
@@ -87,7 +92,7 @@ const QRScan = () =>{
     return(
       <div className="qrscan">
 
-        <div id="modal" style={{position:'absolute', height:'400px', border:'2px solid',zIndex:'1000', width:'500px', background:'white', display:'flex', justifyContent:'center', alignItems:'center', visibility:'hidden'}}>
+        <div id="modal" style={{position:'absolute', height:'350px', border:'2px solid',zIndex:'1000', width:'400px', background:'white', display:'flex', justifyContent:'center', alignItems:'center', visibility:'hidden'}}>
           <button onClick={Handlesubmit}>Click Here</button>
           <button id="hide" style={{visibility:'hidden'}} onClick={Close}>Scan Next Qr</button>
         </div>
