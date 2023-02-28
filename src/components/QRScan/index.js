@@ -92,9 +92,9 @@ const QRScan = () =>{
     return(
       <div className="qrscan">
 
-        <div id="modal" style={{position:'absolute', height:'250px', border:'2px solid',zIndex:'1000', width:'300px', background:'white', display:'flex', justifyContent:'center', alignItems:'center', visibility:'',borderRadius:'10px'}}>
-          <button style={{background:'transparent', borderRadius:'10px', width:'90px', height:'50px', marginRight:'15px'}} onClick={Handlesubmit}>Click Here</button>
-          <button  id="hide" style={{visibility:'',background:'transparent', borderRadius:'10px', width:'100px', height:'50px'}} onClick={Close}>Scan Next Qr</button>
+        <div id="modal" style={{position:'absolute', height:'250px', border:'2px solid',zIndex:'1000', width:'300px', background:'white', display:'flex', justifyContent:'center', alignItems:'center', visibility:'hidden',borderRadius:'10px'}}>
+          <button style={{background:'transparent', borderRadius:'10px', width:'90px', height:'50px', marginRight:'15px', border:'2px solid'}} onClick={Handlesubmit}>Click Here</button>
+          <button  id="hide" style={{visibility:'hidden',background:'transparent', borderRadius:'10px', width:'100px', height:'50px', border:'2px solid'}} onClick={Close}>Scan Next Qr</button>
         </div>
 
         <div id="back" style={{height:'100vh', width:'100vw', position:'absolute', background:'black', opacity:'0.5', zIndex:'999', visibility:'hidden'}}>
