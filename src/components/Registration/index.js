@@ -40,7 +40,7 @@ const Registration = () =>{
         </div>
 
 
-      <div style={{display:"flex", flexDirection:"column", width:"100vw", height: "80vh", justifyContent:"center", alignItems:"center"}}>
+      <div style={{display:"flex", flexDirection:"column", width:"100vw", justifyContent:"center", alignItems:"center", marginTop: '90px'}}>
 
         <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', alignItems: 'center', justifyContent:'center'}}>
 
