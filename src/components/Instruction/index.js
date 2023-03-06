@@ -40,9 +40,9 @@ return(
 
                 <p style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px'}}>YOUR COMPASS</p>
 
-                <div style={{maxWidth: '700px', minWidth: '250px', backgroundColor: 'white', opacity: '0.7', borderRadius: '20px', padding: '20px', margin: '20px', marginTop: '0'}}>
+                <div style={{maxWidth: '700px', minWidth: '250px', backgroundColor: 'white', opacity: '0.7', borderRadius: '20px', padding: '20px', margin: '20px', marginTop: '0', fontSize: '10px'}}>
                     <p>Welcome to The Great Nissan X-Trail Expedition!</p>
-                    <p>Get ready to embark on a thrilling journeyto Defy Ordinary.</p>
+                    <p>Get ready to embark on a thrilling journey to Defy Ordinary.</p>
                     <p>This site is your compass and marks your progress throughout the expedition.</p>
                     <p>And rest assured, our staff is present at every stop to guide you.</p>
                 </div>
