@@ -1,21 +1,9 @@
 import nislogo from '../Z_Styles/Xtrail Expeditiion.png'
 import nislogo2 from '../Z_Styles/Nissan Logo.png'
 import rostawami from '../Z_Styles/AWR Logo.png'
-import { Link } from "react-router-dom";
-import xtrail from '../Z_Styles/xtrail.png'
-import { useNavigate } from 'react-router-dom';
-import {useLocation} from 'react-router-dom';
+import photos from '../Z_Styles/Photos.png'
 
-const  Instruction = () =>{
-
-    const navigate = useNavigate();
-    const location = useLocation();
-
-
-    function Handlesubmit(){
-        navigate('/qrscan',{state:{id:location.state.id}})
-        
-    }
+const  UploadImage = () =>{
 
 return(
     <>
@@ -27,6 +15,9 @@ return(
           <div style={{display: 'flex', flexDirection: 'column', width:'50%', textAlign: 'right', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
             <img id='head' style={{width: '180px', textAlign: 'right', marginRight: '10px'}} src={rostawami} alt="Nissan Laptop Cover"/>
           </div>
+
+          
+
         </div>
 
 
@@ -38,16 +29,16 @@ return(
                     <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
                 </div>
 
-                <p style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px'}}>YOUR COMPASS</p>
-
-                <div style={{maxWidth: '700px', minWidth: '250px', backgroundColor: 'white', opacity: '0.7', borderRadius: '20px', padding: '20px', margin: '20px', marginTop: '0', fontSize: '14px'}}>
-                    <p>Welcome to The Great Nissan X-Trail Expedition!</p>
-                    <p>Get ready to embark on a thrilling journey to Defy Ordinary.</p>
-                    <p>This site is your compass and marks your progress throughout the expedition.</p>
-                    <p>And rest assured, our staff is present at every stop to guide you.</p>
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop: '5px'}}>
+                    <img id='head' style={{width: '180px', textAlign: 'right', marginRight: '10px'}} src={photos} alt="Nissan Laptop Cover"/>
                 </div>
+
+                <p style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px', marginTop: '-15px'}}>Please upload any images taken on your expedition</p>
+
             
-                <button type="submit" style={{maxWidth: '700px', minWidth: '250px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '100px'}} onClick={Handlesubmit}>START</button>
+                <button type="submit" style={{maxWidth: '700px', minWidth: '250px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '10px'}}>Choose Files</button>
+
+                <button type="submit" style={{maxWidth: '700px', minWidth: '250px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '100px'}}>Upload</button>
 
         
         </div> 
@@ -56,4 +47,4 @@ return(
 )
 }
 
-export default Instruction
+export default UploadImage
