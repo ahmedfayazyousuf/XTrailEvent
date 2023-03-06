@@ -1,6 +1,8 @@
+import nislogo from '../Z_Styles/Xtrail Expeditiion.png'
+import nislogo2 from '../Z_Styles/Nissan Logo.png'
+import rostawami from '../Z_Styles/AWR Logo.png'
 import { Link } from "react-router-dom";
 import xtrail from '../Z_Styles/xtrail.png'
-import nislogo from '../Z_Styles/nislogo.png'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
 
@@ -16,31 +18,41 @@ const  Instruction = () =>{
     }
 
 return(
-    <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100vw', height:'100vh'}}>
+    <>
+        <div style={{display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent:'center'}}>
+          <div style={{display: 'flex', flexDirection: 'column', width:'50%'}}>
+            <img id='head' style={{width: '100px', marginLeft: '10px'}} src={nislogo2} alt="Nissan Laptop Cover"/>
+          </div>
 
-        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%', height:'100%'}}>
-
-            <img id='head' style={{width: '150px'}} src={nislogo} alt="Nissan Laptop Cover"/>
-
-            <h1 style={{fontWeight:'1000', fontSize: '30px', marginTop: '5px', marginBottom: '14px'}}>INSTRUCTIONS</h1>
-
-            <div style={{maxWidth: '700px', minWidth: '250px', backgroundColor: 'white', opacity: '0.7', borderRadius: '20px', padding: '20px', margin: '20px', marginTop: '0'}}>
-                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-            </div>
-          
-
-            <button type="submit" style={{width:"180px", borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={Handlesubmit}>START</button>
+          <div style={{display: 'flex', flexDirection: 'column', width:'50%', textAlign: 'right', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+            <img id='head' style={{width: '180px', textAlign: 'right', marginRight: '10px'}} src={rostawami} alt="Nissan Laptop Cover"/>
+          </div>
+        </div>
 
 
-            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'flex-end', width: '100%'}}>
-                <img style={{minWidth: '100px', maxWidth: '250px', margin: '20px'}} src={xtrail} alt="tick"/>
-            </div>
+        <div style={{display:"flex", flexDirection:"column", width:"100vw", justifyContent:"center", alignItems:"center", marginTop: '5vh'}}>
+
+            <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', alignItems: 'center', justifyContent:'center'}}>
+            
+                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                    <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
+                </div>
+
+                <p style={{paddingRight: '50px', paddingLeft: '50px', color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px'}}>YOUR COMPASS</p>
+
+                <div style={{maxWidth: '700px', minWidth: '250px', backgroundColor: 'white', opacity: '0.7', borderRadius: '20px', padding: '20px', margin: '20px', marginTop: '0'}}>
+                    <p>Welcome to The Great Nissan X-Trail Expedition!</p>
+                    <p>Get ready to embark on a thrilling journeyto Defy Ordinary.</p>
+                    <p>This site is your compass and marks your progress throughout the expedition.</p>
+                    <p>And rest assured, our staff is present at every stop to guide you.</p>
+                </div>
+            
+                <button type="submit" style={{maxWidth: '700px', minWidth: '250px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={Handlesubmit}>START</button>
+
         
         </div> 
-
-        
-
     </div>
+    </>
 )
 }
 
