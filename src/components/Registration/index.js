@@ -45,7 +45,7 @@ const Registration = () =>{
         <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', alignItems: 'center', justifyContent:'center'}}>
 
           <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-            <img id='head' style={{width: '300px'}} src={nislogo} alt="Nissan Laptop Cover"/>
+            <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
           </div>
 
           <p style={{paddingRight: '50px', paddingLeft: '50px', color: 'black', fontSize: '22px', fontWeight: '0'}}>Register</p>
