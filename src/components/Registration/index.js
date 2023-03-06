@@ -40,7 +40,7 @@ const Registration = () =>{
         </div>
 
 
-      <div style={{display:"flex", flexDirection:"column", width:"100vw", justifyContent:"center", alignItems:"center", marginTop: '90px'}}>
+      <div style={{display:"flex", flexDirection:"column", width:"100vw", justifyContent:"center", alignItems:"center", marginTop: '10vh'}}>
 
         <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', alignItems: 'center', justifyContent:'center'}}>
 
@@ -48,7 +48,7 @@ const Registration = () =>{
             <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
           </div>
 
-          <p style={{paddingRight: '50px', paddingLeft: '50px', color: 'black', fontSize: '22px', fontWeight: '0'}}>Register</p>
+          <p style={{paddingRight: '50px', paddingLeft: '50px', color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px'}}>Register</p>
           
           <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
               <input type="text" placeholder='Name' id="Name" style={{background:"transparent", border:"1px solid black", marginBottom:'15px', width:"100%", height:'27px', color:"black", paddingLeft: '10px', paddingRight: '10px', backgroundColor: 'white'}}/> 
@@ -68,7 +68,7 @@ const Registration = () =>{
           </div>
 
           <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>  
-            <button style={{cursor: 'grab', width:"100%", height:'40px', padding: '5px', border: 'none', backgroundColor: 'black', color: 'white', borderRadius: '30px'}} onClick={Handlesubmit} variant="contained">SUBMIT</button>
+            <button style={{cursor: 'grab', width:"100%", height:'40px', padding: '5px', border: 'none', backgroundColor: 'black', color: 'white', borderRadius: '30px', marginTop: '-20px'}} onClick={Handlesubmit} variant="contained">SUBMIT</button>
           </div>
 
         </div>
