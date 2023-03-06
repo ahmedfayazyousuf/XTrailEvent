@@ -5,6 +5,7 @@ import Instruction from './components/Instruction';
 import UploadImage from './components/UploadImage';
 import QRScan from './components/QRScan';
 import ThankYou from './components/ThankYou';
+import Map from './components/Map';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Registration />} />
+          <Route path="/Map" element={<Map />} />
           <Route path="/Instructions" element={<Instruction />} />
           <Route path="/QRScan" element={<QRScan />} />
           <Route path="/ThankYou" element={<ThankYou />} />
