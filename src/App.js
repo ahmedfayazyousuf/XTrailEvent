@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Instruction from './components/Instruction';
 import QRScan from './components/QRScan';
 import ThankYou from './components/ThankYou';
+import Map from './components/Map';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/Instructions" element={<Instruction />} />
           <Route exact path="/QRScan" element={<QRScan />} />
           <Route exact path="/ThankYou" element={<ThankYou />} />
+          <Route exact path="/Map" element={<Map />} />
         </Routes>
       </Router>
     </div>

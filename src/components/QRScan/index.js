@@ -29,64 +29,43 @@ const QRScan = () =>{
       if(data!=null){  
         console.log(data.text)
           if(data.text === '1'){
-            document.getElementById('hide').style.visibility = 'hidden'
-            document.getElementById('modal').style.visibility = 'visible';
-            document.getElementById('back').style.visibility = 'visible';
+
 
             if(c===0){
               Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
-              
+              navigate('/map',{state:{no:1,id:location.state.id}})
             }
             
             
           }
 
           if(data.text === '2'){
-            document.getElementById('hide').style.visibility = 'hidden' 
-            document.getElementById('modal').style.visibility = 'visible';
-            document.getElementById('back').style.visibility = 'visible';
+
             if(c===0){
               Users.doc(location.state.id).update({Location2:firebase.firestore.FieldValue.serverTimestamp()})
-              
+              navigate('/map',{state:{no:2,id:location.state.id}})
             }
             
           }
 
           if(data.text === '3'){
-            document.getElementById('hide').style.visibility = 'hidden'
-            document.getElementById('modal').style.visibility = 'visible';
-            document.getElementById('back').style.visibility = 'visible';
+ 
             if(c===0){
               Users.doc(location.state.id).update({Location3:firebase.firestore.FieldValue.serverTimestamp()})
-              
+              navigate('/map',{state:{no:3,id:location.state.id}})
             }
             
           }
 
           if(data.text === '4'){
-            document.getElementById('hide').style.visibility = 'hidden'
-            document.getElementById('modal').style.visibility = 'visible';
-            document.getElementById('back').style.visibility = 'visible';
+
             if(c===0){
               Users.doc(location.state.id).update({Location4:firebase.firestore.FieldValue.serverTimestamp()})
-              
+              navigate('/map',{state:{no:4,id:location.state.id}})
             }
-            
+            setCount('4')
           }
 
-          if(data.text === '5'){
-            document.getElementById('hide').style.visibility = 'visible'
-            document.getElementById('hide').innerHTML = 'End Ride'
-            document.getElementById('location').style.visibility = 'hidden'
-            document.getElementById('modal').style.visibility = 'visible';
-            document.getElementById('back').style.visibility = 'visible';
-            if(c===0){
-              Users.doc(location.state.id).update({Location5:firebase.firestore.FieldValue.serverTimestamp()})
-              
-            }
-            setCount('5')
-            
-          }
       }
     };
 
