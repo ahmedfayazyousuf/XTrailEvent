@@ -1,9 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Registration from './components/Registration';
-import Home from './components/Home';
 import Instruction from './components/Instruction';
+import UploadImage from './components/UploadImage';
 import QRScan from './components/QRScan';
 import ThankYou from './components/ThankYou';
 
@@ -13,9 +12,10 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Registration />} />
-          <Route exact path="/Instructions" element={<Instruction />} />
-          <Route exact path="/QRScan" element={<QRScan />} />
-          <Route exact path="/ThankYou" element={<ThankYou />} />
+          <Route path="/Instructions" element={<Instruction />} />
+          <Route path="/QRScan" element={<QRScan />} />
+          <Route path="/ThankYou" element={<ThankYou />} />
+          <Route path="/UploadImage" element={<UploadImage />} />
         </Routes>
       </Router>
     </div>
