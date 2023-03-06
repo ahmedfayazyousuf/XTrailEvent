@@ -10,8 +10,9 @@ body, html{
     overflow-y: hidden;
 }
 body {
-  background-image: url("wallpaper.jpg");
+  background-image: url("Microsite1.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     background-blend-mode: 0.6;
     overflow-y: hidden;
