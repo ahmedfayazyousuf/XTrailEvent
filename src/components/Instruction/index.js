@@ -19,7 +19,7 @@ const  Instruction = () =>{
 
 return(
     <>
-        <div style={{display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent:'center'}}>
+        <div style={{display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent:'center', overflowY: 'scroll'}}>
           <div style={{display: 'flex', flexDirection: 'column', width:'50%'}}>
             <img id='head' style={{width: '100px', marginLeft: '10px'}} src={nislogo2} alt="Nissan Laptop Cover"/>
           </div>
