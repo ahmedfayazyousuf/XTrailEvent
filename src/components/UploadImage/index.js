@@ -44,23 +44,7 @@ const  UploadImage = () =>{
 
     }
 
-    const toBase64 = file => new Promise((resolve, reject) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onload = () => resolve(reader.result);
-      reader.onerror = error => reject(error);
-  });
 
-  async function Main(file) {
-    try {
-       const result = await toBase64(file);
-       return result
-    } catch(error) {
-       console.error(error);
-       return;
-    }
-    //...
- }
 
 
 
@@ -69,8 +53,8 @@ const  UploadImage = () =>{
       buttonRef.current.disabled = true;
 
       file.map((file,index)=>{
-        var lol = Main(file).then(data =>{
-          console.log(data)
+
+        //   console.log(data)
           const storage = getStorage();
           var storagePath = 'uploads/' + file.name ;
           const storageRef = ref(storage, storagePath);
@@ -89,20 +73,9 @@ const  UploadImage = () =>{
               // complete function ....
               getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                 console.log('File available at', downloadURL);
-                const Image = firebase.firestore().collection("Images");
-                const Image64= firebase.firestore().collection("Images64");
-                Image.add({imageURL:downloadURL});
-                // Image64.add({image:data});
-                axios.post("https://photocloud.azurewebsites.net/upload", {
-                  downloadURL
-                    },{headers: {
-                      'Access-Control-Allow-Origin': '*',
-                      'Content-Type': 'application/json',
-              }})
-                navigate(`/Success`)
               });
             });
-        });
+    
       })
       
  
