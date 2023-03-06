@@ -8,7 +8,9 @@ import axios from "axios";
 import {QrReader} from "react-qr-reader";
 import './qrscan.css'
 import {useLocation} from 'react-router-dom';
-
+import nislogo from '../Z_Styles/Xtrail Expeditiion.png'
+import nislogo2 from '../Z_Styles/Nissan Logo.png'
+import rostawami from '../Z_Styles/AWR Logo.png'
 
 
 const QRScan = () =>{
@@ -121,6 +123,21 @@ const QRScan = () =>{
 
     return(
       <div className="qrscan">
+
+        <div style={{display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent:'center'}}>
+          <div style={{display: 'flex', flexDirection: 'column', width:'50%'}}>
+            <img id='head' style={{width: '100px', marginLeft: '10px'}} src={nislogo2} alt="Nissan Laptop Cover"/>
+          </div>
+
+
+          <div style={{display: 'flex', flexDirection: 'column', width:'50%', textAlign: 'right', justifyContent: 'flex-end', alignItems: 'flex-end'}}>
+            <img id='head' style={{width: '180px', textAlign: 'right', marginRight: '10px'}} src={rostawami} alt="Nissan Laptop Cover"/>
+          </div>
+        </div>
+
+        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', marginTop:'5vh'}}>
+            <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
+          </div>
 
         <div id="modal" style={{position:'absolute', height:'250px', border:'2px solid',zIndex:'1000', width:'300px', background:'white', display:'flex', justifyContent:'center', alignItems:'center', visibility:'hidden',borderRadius:'10px'}}>
           <button id="location" style={{background:'transparent', borderRadius:'10px', width:'90px', height:'50px', marginRight:'15px', border:'2px solid'}} onClick={Handlesubmit}>View Location</button>
