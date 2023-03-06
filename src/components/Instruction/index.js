@@ -47,7 +47,7 @@ return(
                     <p>And rest assured, our staff is present at every stop to guide you.</p>
                 </div>
             
-                <button type="submit" style={{maxWidth: '700px', minWidth: '250px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab'}} onClick={Handlesubmit}>START</button>
+                <button type="submit" style={{maxWidth: '700px', minWidth: '250px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px'}} onClick={Handlesubmit}>START</button>
 
         
         </div> 
