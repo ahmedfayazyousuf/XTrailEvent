@@ -38,7 +38,7 @@ return(
                     <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
                 </div>
 
-                <p style={{paddingRight: '50px', paddingLeft: '50px', color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px'}}>YOUR COMPASS</p>
+                <p style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px'}}>YOUR COMPASS</p>
 
                 <div style={{maxWidth: '700px', minWidth: '250px', backgroundColor: 'white', opacity: '0.7', borderRadius: '20px', padding: '20px', margin: '20px', marginTop: '0'}}>
                     <p>Welcome to The Great Nissan X-Trail Expedition!</p>
