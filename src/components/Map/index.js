@@ -72,12 +72,12 @@ const  Map = () =>{
                     </div>
     
 
-                    <div style={{maxWidth: '700px', minWidth: '250px', backgroundColor: 'rgba(255,255,255,0.6)',  borderRadius: '20px', padding: '20px', margin: '20px', marginTop: '7vh'}}>
+                    <div style={{maxWidth: '700px', minWidth: '200px', backgroundColor: 'rgba(255,255,255,0.6)',  borderRadius: '20px', padding: '20px', margin: '20px', marginTop: '3vh'}}>
                     {/* eslint-disable-next-line */}
                         <img style={{width: '130px'}} id='img' />
                     </div>
                 
-                    <button type="submit" style={{maxWidth: '700px', minWidth: '250px', border: '0px', padding: '10px', color: 'white', backgroundColor: '#9E003A', cursor: 'grab', borderRadius: '30px',fontWeight:'300', marginBottom: '100px'}} onClick={Handlesubmit}>FOLLOW THE TRAIL</button>
+                    <button type="submit" style={{maxWidth: '700px', minWidth: '250px', border: '0px', padding: '10px', color: 'white', backgroundColor: '#9E003A', cursor: 'grab', borderRadius: '30px', fontWeight:'300'}} onClick={Handlesubmit}>FOLLOW THE TRAIL</button>
     
             
             </div> 
