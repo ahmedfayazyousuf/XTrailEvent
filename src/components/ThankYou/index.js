@@ -35,9 +35,9 @@ const  ThankYou = () =>{
         var h = l2-l1 // m - h
         var h2 = l3 - l2 // h - d
         var h3 = l4 -l3
-        var m1 = h/60/1000
-        var m2 = h2/60/1000
-        var m3 = h3/60/1000
+        var m1 = Math.floor(h/60/1000)
+        var m2 = Math.floor(h2/60/1000)
+        var m3 = Math.floor(h3/60/1000)
 
         document.getElementById('d1').innerHTML = `${m1} min`
         document.getElementById('d2').innerHTML = `${m2} min`
