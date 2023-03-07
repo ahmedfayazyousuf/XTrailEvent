@@ -1,8 +1,6 @@
 import nislogo from '../Z_Styles/Xtrail Expeditiion.png'
 import nislogo2 from '../Z_Styles/Nissan Logo.png'
 import rostawami from '../Z_Styles/AWR Logo.png'
-import { Link } from "react-router-dom";
-import xtrail from '../Z_Styles/xtrail.png'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
 
@@ -47,7 +45,7 @@ return(
                     <p>And rest assured, our staff is present at every stop to guide you.</p>
                 </div>
             
-                <button type="submit" style={{maxWidth: '700px', minWidth: '250px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}} onClick={Handlesubmit}>START</button>
+                <button type="submit" style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}} onClick={Handlesubmit}>START</button>
 
         
         </div> 

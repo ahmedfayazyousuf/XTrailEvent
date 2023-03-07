@@ -43,7 +43,7 @@ return(
                 <p style={{color: 'black', fontSize: '20px', fontWeight: '0', marginBottom: '20px'}}>DEFIED ORDINARY</p>
             
                 <Link to={{pathname:`/uploadimage`}}> 
-                  <button type="submit" style={{maxWidth: '700px', minWidth: '250px', borderRadius: '10px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Proceed</button>
+                  <button type="submit" style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Proceed</button>
                 </Link>
         
         </div> 
