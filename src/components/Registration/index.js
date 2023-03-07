@@ -15,6 +15,29 @@ const Registration = () =>{
     const Number = document.getElementById("no").value;
     const Name = document.getElementById("Name").value;
 
+    if(Name === ''){
+      // buttonRef.current.disabled = false;
+      document.getElementById('error').innerHTML = "PLEASE ENTER YOUR NAME"
+      return;
+  }
+
+      var validRegex =   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+      if (Email === "" || !Email.match(validRegex))
+      {
+          document.getElementById('error').innerHTML = "PLEASE ENTER A VALID EMAIL"
+          return;
+      }
+
+      // eslint-disable-next-line
+      if (document.getElementById("no").value === "" ){
+          console.log('Hello')
+          // buttonRef.current.disabled = false;
+          document.getElementById('error').innerHTML = "PLEASE ENTER A VALID PHONE NUMBER"
+          return;
+          
+      }
+
     Users.add({
       Name:Name,
       Email:Email,
@@ -64,11 +87,11 @@ const Registration = () =>{
           </div>
 
           <div>
-              <p id='error' style={{color:"red", marginBottom: '5px'}}></p>
+              <p id='error' style={{color:"black", marginTop: '-15px', fontSize:'11px',marginBottom:'25px', fontWeight:'900'}}></p>
           </div>
 
           <div style={{width:"100%", display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>  
-            <button style={{cursor: 'grab', width:"100%", height:'40px', padding: '5px', border: 'none', backgroundColor: 'black', color: 'white', borderRadius: '30px', marginTop: '-20px'}} onClick={Handlesubmit} variant="contained">SUBMIT</button>
+            <button style={{cursor: 'grab', width:"100%", height:'40px', padding: '5px', border: 'none', backgroundColor: 'black', color: 'white', borderRadius: '30px', marginTop: '-20px'}} onClick={Handlesubmit} variant="contained">Submit</button>
           </div>
 
         </div>
