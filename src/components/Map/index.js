@@ -22,6 +22,8 @@ const  Map = () =>{
 
         if(location.state.no === 3){
             window.open("https://goo.gl/maps/HvyhE463ETJEGgju7", "_blank")
+            navigate('/ThankYou',{state:{id:location.state.id,no:location.state.no}})
+            return;
         }
         
         navigate('/qrscan',{state:{id:location.state.id,no:location.state.no}})
