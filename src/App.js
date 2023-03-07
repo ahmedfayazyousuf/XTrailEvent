@@ -5,6 +5,7 @@ import Instruction from './components/Instruction';
 import UploadImage from './components/UploadImage';
 import QRScan from './components/QRScan';
 import ThankYou from './components/ThankYou';
+import ThankYou2 from './components/ThankYou2';
 import Map from './components/Map';
 import Proceed from './components/Proceed';
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/Instructions" element={<Instruction />} />
           <Route path="/QRScan" element={<QRScan />} />
           <Route path="/ThankYou" element={<ThankYou />} />
+          <Route path="/ThankYou2" element={<ThankYou2 />} />
           <Route path="/UploadImage" element={<UploadImage />} />
           <Route path="/Proceed" element={<Proceed />} />
         </Routes>
