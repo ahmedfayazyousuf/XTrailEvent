@@ -5,18 +5,48 @@ import { Link } from "react-router-dom";
 // import xtrail from '../Z_Styles/xtrail.png'
 // import { useNavigate } from 'react-router-dom';
 // import {useLocation} from 'react-router-dom';
+import { useEffect } from 'react';
+import firebase from "../../firbase"
+import {useLocation} from 'react-router-dom';
 
 const  ThankYou = () =>{
 
     // const navigate = useNavigate();
-    // const location = useLocation();
+    const location = useLocation();
 
 
     // function Handlesubmit(){
     //     navigate('/qrscan',{state:{id:location.state.id}})
         
     // }
+    useEffect(()=>{
+      const Users = firebase.firestore().collection("Users");
+      
+      Users.doc(location.state.id).get().then((doc)=>{
+        const data = doc.data()
+        var l1 = new Date(data.Location1.seconds*1000).getTime()
+        var l2 = new Date(data.Location2.seconds*1000).getTime()
+        var l3 = new Date(data.Location3.seconds*1000).getTime()
+        var l4 = new Date().getTime()
 
+        var nikki = 0
+        
+        console.log(l1)
+        var h = l2-l1 // m - h
+        var h2 = l3 - l2 // h - d
+        var h3 = l4 -l3
+        var m1 = h/60/1000
+        var m2 = h2/60/1000
+        var m3 = h3/60/1000
+
+        document.getElementById('d1').innerHTML = `${m1} min`
+        document.getElementById('d2').innerHTML = `${m2} min`
+        document.getElementById('d3').innerHTML = `${m3} min`
+        document.getElementById('total').innerHTML = `${m1+m2+m3} min`
+        console.log(m)
+
+      },[])
+    },[])
 return(
     <>
         <div style={{display: 'flex', flexDirection: 'row', width: '100%', alignItems: 'center', justifyContent:'center'}}>
@@ -53,25 +83,25 @@ return(
                 <tr style={{padding: '5px'}}>
                   <td>Meydan Hotel</td>
                   <td>Half Desert Terrain</td>
-                  <td>30 mins</td>
+                  <td id='d1'>30 mins</td>
                 </tr>
 
                 <tr style={{padding: '5px'}}>
                   <td>Half Desert Terain</td>
                   <td>Dubai Frame</td>
-                  <td>40 mins</td>
+                  <td id='d2'>40 mins</td>
                 </tr>
 
                 <tr style={{padding: '5px'}}>
                   <td>Dubai Frame</td>
                   <td>Nikki Beach</td>
-                  <td>50 mins</td>
+                  <td id='d3'>50 mins</td>
                 </tr>
 
                 <tr style={{padding: '5px'}}>
                   <td></td>
                   <td className="bold">Total</td>
-                  <td className="bold">120 mins</td>
+                  <td className="bold" id='total'>120 mins</td>
                 </tr>
 
               </table>

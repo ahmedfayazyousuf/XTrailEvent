@@ -10,6 +10,10 @@ const  Proceed = () =>{
   const location = useLocation();
 
   function submit(){
+
+    if(location.state.no === 3){
+      navigate('/ThankYou',{state:{id:location.state.id,no:location.state.no}})
+    }
     navigate('/qrscan',{state:{id:location.state.id,no:location.state.no}})
   }
 
