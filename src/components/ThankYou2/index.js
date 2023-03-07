@@ -2,7 +2,6 @@ import nislogo from '../Z_Styles/Xtrail Expeditiion.png'
 import nislogo2 from '../Z_Styles/Nissan Logo.png'
 import tickicon from '../Z_Styles/tickicon.png'
 import rostawami from '../Z_Styles/AWR Logo.png'
-import { Link } from "react-router-dom";
 
 const  ThankYou2 = () =>{
 
@@ -31,7 +30,7 @@ return(
                 <img id='head' style={{width: '120px', marginTop: '50px'}} src={tickicon} alt="Nissan Laptop Cover"/>
             </div>
 
-            <h1 style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px', marginTop: '30px', fontSize: '30px'}}>Thank You!</h1>
+            <h1 style={{color: 'black', fontWeight: '0', marginBottom: '5px', marginTop: '30px', fontSize: '30px'}}>Thank You!</h1>
         
             
         </div> 

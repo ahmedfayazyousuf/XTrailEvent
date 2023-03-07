@@ -3,10 +3,12 @@ import nislogo2 from '../Z_Styles/Nissan Logo.png'
 import rostawami from '../Z_Styles/AWR Logo.png'
 import photos from '../Z_Styles/Photos.png'
 import { useState } from "react";
+ // eslint-disable-next-line
 import firebase from "../../firbase"
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate } from 'react-router-dom';
 import {useRef} from 'react';
+ // eslint-disable-next-line
 import axios from "axios";
 
 const  UploadImage = () =>{
@@ -51,7 +53,7 @@ const  UploadImage = () =>{
     function sendData (){
 
       buttonRef.current.disabled = true;
-
+ // eslint-disable-next-line
       file.map((file,index)=>{
 
         //   console.log(data)

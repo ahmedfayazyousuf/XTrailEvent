@@ -38,8 +38,44 @@ return(
                 <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
             </div>
 
-            <h1 style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px', marginTop: '60px'}}>Nissan X-Trail Expedition mission complete!</h1>
-            <p style={{color: 'black', fontSize: '20px', fontWeight: '0', marginBottom: '65px'}}>Thank you for participating!</p>
+            <h1 style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '-10px', marginTop: '30px'}}>Nissan X-Trail Expedition mission complete!</h1>
+            <p style={{color: 'black', fontSize: '20px', fontWeight: '0', marginBottom: '10px'}}>Thank you for participating!</p>
+
+            <div style={{backgroundColor: 'white', opacity: '0.7', width: '120%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '15px'}}>
+              <table style={{borderCollapse: 'collapse', fontSize: '12px', width: '100%'}}>
+
+                <tr style={{padding: '5px'}}>
+                  <th style={{backgroundColor: 'black', color: 'white', borderColor: 'black'}} >Start Location</th>
+                  <th style={{backgroundColor: 'black', color: 'white', borderColor: 'black'}}>End Location</th>
+                  <th style={{backgroundColor: 'black', color: 'white', borderColor: 'black'}}>Time Taken</th>
+                </tr>
+
+                <tr style={{padding: '5px'}}>
+                  <td>Meydan Hotel</td>
+                  <td>Half Desert Terrain</td>
+                  <td>30 mins</td>
+                </tr>
+
+                <tr style={{padding: '5px'}}>
+                  <td>Half Desert Terain</td>
+                  <td>Dubai Frame</td>
+                  <td>40 mins</td>
+                </tr>
+
+                <tr style={{padding: '5px'}}>
+                  <td>Dubai Frame</td>
+                  <td>Nikki Beach</td>
+                  <td>50 mins</td>
+                </tr>
+
+                <tr style={{padding: '5px'}}>
+                  <td></td>
+                  <td className="bold">Total</td>
+                  <td className="bold">120 mins</td>
+                </tr>
+
+              </table>
+            </div>
         
             <Link to={{pathname:`/uploadimage`}}> 
               <button type="submit" style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Proceed</button>

@@ -23,7 +23,7 @@ body {
     font-family: myFont;
     src:url(NissanBrand-Bold.ttf);
 }
-h1,h2,h3,h4,h5,h6,a,div, tr, td, table, th, .sss{
+h1,h2,h3,h4,h5,h6,a,div, tr, td, table, th, .sss, .bold{
     font-family: myFont;
 }
 
@@ -116,3 +116,6 @@ input::file-selector-button {
 
 }
 
+table, th, td {
+  border: 1px solid;
+}
