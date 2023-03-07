@@ -10,7 +10,7 @@ const  Proceed = () =>{
   const location = useLocation();
 
   function submit(){
-    navigate('qrscan',{state:{id:location.state.id,no:location.state.no}})
+    navigate('/qrscan',{state:{id:location.state.id,no:location.state.no}})
   }
 
 return(
