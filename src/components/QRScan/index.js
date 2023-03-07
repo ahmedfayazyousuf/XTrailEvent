@@ -14,6 +14,7 @@ import nislogo from '../Z_Styles/Xtrail Expeditiion.png'
 import nislogo2 from '../Z_Styles/Nissan Logo.png'
 import rostawami from '../Z_Styles/AWR Logo.png'
 import desterrain from '../Z_Styles/Desert Terrain.png'
+import scan from '../Z_Styles/Scan the X.png'
 
 
 const QRScan = () =>{
@@ -135,7 +136,10 @@ const QRScan = () =>{
 
         </div>
         <div className="scanframe" style={{zIndex:'1'}}>
-        <img id='head' style={{width: '100px', marginLeft: '10px', zIndex: '100000000000000'}} src={desterrain} alt="Nissan Laptop Cover"/>
+        <div style={{display:'flex',flexDirection:'column'}}>
+          <img id='head' style={{width: '100px', marginLeft: '10px', zIndex: '100000000000000'}} src={desterrain} alt="Nissan Laptop Cover"/>
+          <img id='head' style={{width: '100px', marginLeft: '10px', zIndex: '100000000000000'}} src={scan} alt="Nissan Laptop Cover"/>
+        </div>
         <QrReader
             constraints = {{facingMode: 'environment'} }
             
