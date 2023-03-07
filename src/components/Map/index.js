@@ -14,7 +14,18 @@ const  Map = () =>{
 
 
     function Handlesubmit(){
-        window.open("https://goo.gl/maps/hTBcqEZi1Lmctuz5A", "_blank")
+        if(location.state.no === 1){
+            window.open("https://goo.gl/maps/hTBcqEZi1Lmctuz5A", "_blank")
+        }
+
+        if(location.state.no === 2){
+            window.open("https://www.google.com/maps?q=25.233905792236328,55.30161666870117&z=17&hl=en", "_blank")
+        }
+
+        if(location.state.no === 3){
+            window.open("https://goo.gl/maps/HvyhE463ETJEGgju7", "_blank")
+        }
+        
         navigate('/qrscan',{state:{id:location.state.id}})
         
     }
