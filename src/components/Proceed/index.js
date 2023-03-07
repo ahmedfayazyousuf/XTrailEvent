@@ -13,6 +13,7 @@ const  Proceed = () =>{
 
     if(location.state.no === 3){
       navigate('/ThankYou',{state:{id:location.state.id,no:location.state.no}})
+      return
     }
     navigate('/qrscan',{state:{id:location.state.id,no:location.state.no}})
   }
