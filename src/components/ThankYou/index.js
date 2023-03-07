@@ -43,7 +43,7 @@ const  ThankYou = () =>{
         document.getElementById('d2').innerHTML = `${m2} min`
         document.getElementById('d3').innerHTML = `${m3} min`
         document.getElementById('total').innerHTML = `${m1+m2+m3} min`
-        console.log(m)
+
 
       },[])
     },[])
