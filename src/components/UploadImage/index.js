@@ -73,6 +73,7 @@ const  UploadImage = () =>{
               // complete function ....
               getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                 console.log('File available at', downloadURL);
+                navigate('/ThankYou2')
               });
             });
     
