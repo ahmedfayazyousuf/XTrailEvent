@@ -37,7 +37,13 @@ const QRScan = () =>{
 
             if(c===0){
               Users.doc(location.state.id).update({Location1:firebase.firestore.FieldValue.serverTimestamp()})
-              window.open("https://goo.gl/maps/hTBcqEZi1Lmctuz5A", "_blank")
+              // window.open("https://goo.gl/maps/hTBcqEZi1Lmctuz5A", "_blank")
+              const a = document.createElement('a')
+              a.style.display = 'none'
+              a.setAttribute("href",'https://goo.gl/maps/hTBcqEZi1Lmctuz5A')
+              a.setAttribute('target','_blank')
+              a.click()
+              a.remove()
               navigate('/map',{state:{no:1,id:location.state.id}})
             }
             
