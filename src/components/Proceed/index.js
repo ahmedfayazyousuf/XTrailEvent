@@ -1,7 +1,6 @@
 import nislogo from '../Z_Styles/Xtrail Expeditiion.png'
 import nislogo2 from '../Z_Styles/Nissan Logo.png'
 import rostawami from '../Z_Styles/AWR Logo.png'
-import { Link } from "react-router-dom";
 
 const  Proceed = () =>{
 
@@ -26,9 +25,7 @@ return(
                 <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
             </div>
         
-            <Link to={{pathname:`/uploadimage`}}> 
-                <button type="submit" style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', marginTop: '100px', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Proceed</button>
-            </Link>
+            <button type="submit" onClick={{}} style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', marginTop: '100px', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Tap to Proceed</button>
             
         </div> 
     </div>
