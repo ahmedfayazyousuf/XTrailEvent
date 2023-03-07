@@ -1,9 +1,11 @@
 import { useState } from "react";
 import '../Z_Styles/Nissan.css'
 import firebase from "../../firbase"
+// eslint-disable-next-line
 import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate } from 'react-router-dom';
 import {useRef} from 'react';
+// eslint-disable-next-line
 import axios from "axios";
 import {QrReader} from "react-qr-reader";
 import './qrscan.css'
@@ -14,11 +16,13 @@ import rostawami from '../Z_Styles/AWR Logo.png'
 
 
 const QRScan = () =>{
-
+    // eslint-disable-next-line
     const [c, setC] = useState(0);
     const [count, setCount] = useState(0);
+    // eslint-disable-next-line
     const [map, setMap] = useState("");
     const navigate = useNavigate();
+    // eslint-disable-next-line
     const buttonRef = useRef(null);
     const location = useLocation();
 
