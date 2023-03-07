@@ -15,7 +15,7 @@ const  Map = () =>{
 
     function Handlesubmit(){
         if(location.state.no === 1){
-            window.open("https://goo.gl/maps/hTBcqEZi1Lmctuz5A", "_blank")
+            window.open("https://www.google.com/maps?q=25.119007110595703,55.46257019042969&z=17&hl=en", "_blank")
         }
 
         if(location.state.no === 2){
