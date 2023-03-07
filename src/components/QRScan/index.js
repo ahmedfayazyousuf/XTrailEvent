@@ -42,6 +42,7 @@ const QRScan = () =>{
               a.style.display = 'none'
               a.setAttribute("href",'https://goo.gl/maps/hTBcqEZi1Lmctuz5A')
               a.setAttribute('target','_blank')
+              document.body.appendChild(a);
               a.click()
               a.remove()
               navigate('/map',{state:{no:1,id:location.state.id}})
