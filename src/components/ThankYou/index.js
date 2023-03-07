@@ -32,19 +32,19 @@ return(
 
         <div style={{display:"flex", flexDirection:"column", width:"100vw", justifyContent:"center", alignItems:"center", marginTop: '5vh'}}>
 
-            <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', alignItems: 'center', justifyContent:'center'}}>
+          <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', alignItems: 'center', justifyContent:'center'}}>
             
-                <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
-                    <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
-                </div>
+            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+                <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
+            </div>
 
-                <h1 style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px', marginTop: '60px'}}>Nissan X-trail Expedition mission complete!</h1>
-                <p style={{color: 'black', fontSize: '20px', fontWeight: '0', marginBottom: '65px'}}>Thank you for participating!</p>
-            
-                <Link to={{pathname:`/uploadimage`}}> 
-                  <button type="submit" style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Proceed</button>
-                </Link>
+            <h1 style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px', marginTop: '60px'}}>Nissan X-Trail Expedition mission complete!</h1>
+            <p style={{color: 'black', fontSize: '20px', fontWeight: '0', marginBottom: '65px'}}>Thank you for participating!</p>
         
+            <Link to={{pathname:`/uploadimage`}}> 
+              <button type="submit" style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Proceed</button>
+            </Link>
+            
         </div> 
     </div>
     </>
