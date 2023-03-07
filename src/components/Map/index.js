@@ -14,6 +14,7 @@ const  Map = () =>{
 
 
     function Handlesubmit(){
+        window.open("https://goo.gl/maps/hTBcqEZi1Lmctuz5A", "_blank")
         navigate('/qrscan',{state:{id:location.state.id}})
         
     }
