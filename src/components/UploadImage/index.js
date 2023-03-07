@@ -17,7 +17,7 @@ const  UploadImage = () =>{
     const [count, setCount] = useState(0);
     const navigate = useNavigate();
     const buttonRef = useRef(null);
-
+     
     function handleChange(event) {
       setCount(count+event.target.files.length)
       console.log(event.target.files[0])
@@ -100,7 +100,7 @@ return(
         </div>
 
 
-        <div style={{display:"flex", flexDirection:"column", width:"100vw", justifyContent:"center", alignItems:"center", marginTop: '5vh'}}>
+        <div style={{display:"flex", flexDirection:"column", width:"100vw", justifyContent:"center", alignItems:"center", marginTop: '2vh'}}>
 
             <div style={{display: 'flex', flexDirection: 'column', width: '70%', gap:'5px', alignItems: 'center', justifyContent:'center'}}>
             
