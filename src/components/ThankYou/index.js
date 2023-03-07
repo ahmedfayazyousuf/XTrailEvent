@@ -28,7 +28,7 @@ const  ThankYou = () =>{
         var l2 = new Date(data.Location2.seconds*1000).getTime()
         var l3 = new Date(data.Location3.seconds*1000).getTime()
         var l4 = new Date().getTime()
-
+// eslint-disable-next-line
         var nikki = 0
         
         console.log(l1)
@@ -46,6 +46,7 @@ const  ThankYou = () =>{
 
 
       },[])
+      // eslint-disable-next-line
     },[])
 return(
     <>
