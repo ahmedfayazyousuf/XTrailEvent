@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import '../Z_Styles/Nissan.css'
 import firebase from "../../firbase"
 // eslint-disable-next-line
@@ -105,6 +105,18 @@ const QRScan = () =>{
 
     }
 
+    useEffect(()=>{
+
+
+      if(location.state.no === 2){
+        document.getElementById('area').setAttribute('src','./Dubai Frame.png')
+      } 
+
+      if(location.state.no === 3){
+        document.getElementById('area').setAttribute('src','./Nikki Beach.png')
+      } 
+    },[])
+
 
     return(
       <div className="qrscan">
@@ -137,7 +149,7 @@ const QRScan = () =>{
         </div>
         <div className="scanframe" style={{zIndex:'1'}}>
         <div style={{display:'flex',flexDirection:'column', alignItems:'center'}}>
-          <img id='head' style={{width: '100px', zIndex: '100000000000000',marginBottom:'50px'}} src={desterrain} alt="Nissan Laptop Cover"/>
+          <img id='area' style={{width: '100px', zIndex: '100000000000000',marginBottom:'50px'}} src={desterrain} alt="Nissan Laptop Cover"/>
           <img id='head' style={{width: '68%', zIndex: '100000000000000',marginBottom:'75px'}} src={scan} alt="Nissan Laptop Cover"/>
         </div>
         <QrReader

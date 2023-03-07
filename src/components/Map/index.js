@@ -24,7 +24,7 @@ const  Map = () =>{
             window.open("https://goo.gl/maps/HvyhE463ETJEGgju7", "_blank")
         }
         
-        navigate('/qrscan',{state:{id:location.state.id}})
+        navigate('/qrscan',{state:{id:location.state.id,no:location.state.no}})
         
     }
 

@@ -11,7 +11,7 @@ const  Instruction = () =>{
 
 
     function Handlesubmit(){
-        navigate('/qrscan',{state:{id:location.state.id}})
+        navigate('/qrscan',{state:{id:location.state.id,no:1}})
         
     }
 
