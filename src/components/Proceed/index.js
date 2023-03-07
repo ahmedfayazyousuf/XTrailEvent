@@ -1,8 +1,17 @@
 import nislogo from '../Z_Styles/Xtrail Expeditiion.png'
 import nislogo2 from '../Z_Styles/Nissan Logo.png'
 import rostawami from '../Z_Styles/AWR Logo.png'
+import { useNavigate } from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 const  Proceed = () =>{
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  function submit(){
+    navigate('qrscan',{state:{id:location.state.id,no:location.state.no}})
+  }
 
 return(
     <>
@@ -25,7 +34,7 @@ return(
                 <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
             </div>
         
-            <button type="submit" onClick={{}} style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', marginTop: '100px', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Tap to Proceed</button>
+            <button type="submit" onClick={{submit}} style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', marginTop: '100px', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Tap to Proceed</button>
             
         </div> 
     </div>
