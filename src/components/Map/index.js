@@ -1,8 +1,6 @@
 import nislogo from '../Z_Styles/Xtrail Expeditiion.png'
 import nislogo2 from '../Z_Styles/Nissan Logo.png'
 import rostawami from '../Z_Styles/AWR Logo.png'
-import { Link } from "react-router-dom";
-import xtrail from '../Z_Styles/xtrail.png'
 import { useNavigate } from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
 import { useEffect } from 'react';
@@ -36,7 +34,7 @@ const  Map = () =>{
         }
 
 
-
+        // eslint-disable-next-line
     },[])
 
     return(
@@ -61,8 +59,8 @@ const  Map = () =>{
                     </div>
     
 
-    
                     <div style={{maxWidth: '700px', minWidth: '250px', backgroundColor: 'rgba(255,255,255,0.6)',  borderRadius: '20px', padding: '20px', margin: '20px', marginTop: '7vh'}}>
+                    {/* eslint-disable-next-line */}
                         <img style={{width: '130px'}} id='img' />
                     </div>
                 
