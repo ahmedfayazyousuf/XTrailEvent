@@ -38,9 +38,8 @@ return(
                     <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
                 </div>
 
-                <h1 style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px'}}>Congratulations!</h1>
-                <p style={{color: 'black', fontSize: '20px', fontWeight: '0', marginBottom: '-30px'}}>You've successfully</p>
-                <p style={{color: 'black', fontSize: '20px', fontWeight: '0', marginBottom: '20px'}}>DEFIED ORDINARY</p>
+                <h1 style={{color: 'black', fontSize: '22px', fontWeight: '0', marginBottom: '5px', marginTop: '60px'}}>Nissan X-trail Expedition mission complete!</h1>
+                <p style={{color: 'black', fontSize: '20px', fontWeight: '0', marginBottom: '65px'}}>Thank you for participating!</p>
             
                 <Link to={{pathname:`/uploadimage`}}> 
                   <button type="submit" style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Proceed</button>
