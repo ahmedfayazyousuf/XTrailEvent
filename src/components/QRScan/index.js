@@ -14,7 +14,7 @@ import nislogo from '../Z_Styles/Xtrail Expeditiion.png'
 import nislogo2 from '../Z_Styles/Nissan Logo.png'
 import rostawami from '../Z_Styles/AWR Logo.png'
 import desterrain from '../Z_Styles/Desert Terrain.png'
-import scan from '../Z_Styles/Scan the X.png'
+import scan from '../Z_Styles/Scanicon.png'
 
 
 const QRScan = () =>{
@@ -115,6 +115,7 @@ const QRScan = () =>{
       if(location.state.no === 3){
         document.getElementById('area').setAttribute('src','./Nikki Beach.png')
       } 
+      // eslint-disable-next-line
     },[])
 
 
