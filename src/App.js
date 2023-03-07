@@ -8,6 +8,7 @@ import ThankYou from './components/ThankYou';
 import ThankYou2 from './components/ThankYou2';
 import Map from './components/Map';
 import Proceed from './components/Proceed';
+import Summary from './components/Summary';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/ThankYou2" element={<ThankYou2 />} />
           <Route path="/UploadImage" element={<UploadImage />} />
           <Route path="/Proceed" element={<Proceed />} />
+          <Route path="/Summary" element={<Summary />} />
         </Routes>
       </Router>
     </div>
