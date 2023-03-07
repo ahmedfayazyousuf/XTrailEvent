@@ -26,7 +26,7 @@ const  Map = () =>{
             return;
         }
         
-        navigate('/qrscan',{state:{id:location.state.id,no:location.state.no}})
+        navigate('/qrscan',{state:{id:location.state.id,no:location.state.no+1}})
         
     }
 
