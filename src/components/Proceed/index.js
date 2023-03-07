@@ -10,7 +10,7 @@ const  Proceed = () =>{
   const location = useLocation();
 
   function submit(){
-    navigate('qrscan',{state:{id:location.state.id,no:location.state.no}})
+    navigate('/qrscan',{state:{id:location.state.id,no:location.state.no}})
   }
 
 return(
@@ -34,7 +34,7 @@ return(
                 <img id='head' style={{width: '270px'}} src={nislogo} alt="Nissan Laptop Cover"/>
             </div>
         
-            <button type="submit" onClick={{submit}} style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', marginTop: '100px', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Tap to Proceed</button>
+            <button type="submit" onClick={submit} style={{maxWidth: '700px', minWidth: '250px', padding: '10px', color: 'white', backgroundColor: 'black', marginTop: '100px', cursor: 'grab', borderRadius: '30px', marginBottom: '100px', border: 'none'}}>Tap to Proceed</button>
             
         </div> 
     </div>
