@@ -11,7 +11,7 @@ const  Proceed = () =>{
 
   function submit(){
 
-    if(location.state.no === 3){
+    if(location.state.no === 4){
       navigate('/ThankYou',{state:{id:location.state.id,no:location.state.no}})
       return
     }
