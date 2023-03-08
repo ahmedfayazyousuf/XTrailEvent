@@ -27,7 +27,7 @@ const  ThankYou = () =>{
         var l1 = new Date(data.Location1.seconds*1000).getTime()
         var l2 = new Date(data.Location2.seconds*1000).getTime()
         var l3 = new Date(data.Location3.seconds*1000).getTime()
-        var l4 = new Date().getTime()
+        var l4 = location.state.ct
 // eslint-disable-next-line
         var nikki = 0
         

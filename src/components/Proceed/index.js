@@ -11,10 +11,6 @@ const  Proceed = () =>{
 
   function submit(){
 
-    if(location.state.no === 4){
-      navigate('/ThankYou',{state:{id:location.state.id,no:location.state.no}})
-      return
-    }
     navigate('/qrscan',{state:{id:location.state.id,no:location.state.no}})
   }
 

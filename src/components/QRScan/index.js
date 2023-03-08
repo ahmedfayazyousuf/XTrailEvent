@@ -65,9 +65,11 @@ const QRScan = () =>{
 
           if(data.text === '4'){
 
+            var ct = new Date().getTime()
+
             if(c===0){
               Users.doc(location.state.id).update({Location4:firebase.firestore.FieldValue.serverTimestamp()})
-              navigate('/ThankYou',{state:{no:4,id:location.state.id}})
+              navigate('/ThankYou',{state:{no:4,id:location.state.id,ct:ct}})
             }
             setCount('4')
           }
