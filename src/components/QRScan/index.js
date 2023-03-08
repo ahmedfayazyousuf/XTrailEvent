@@ -118,7 +118,7 @@ const QRScan = () =>{
         document.getElementById('area').setAttribute('src','./Nikki Beach.png')
       } 
       if(location.state.no === 4){
-        document.getElementById('area').setAttribute('src','./fire.png')
+        document.getElementById('area').setAttribute('src','./Flag.png')
       } 
 
       // eslint-disable-next-line
