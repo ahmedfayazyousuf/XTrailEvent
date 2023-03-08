@@ -84,25 +84,25 @@ return(
                 <tr style={{padding: '5px'}}>
                   <td>Meydan Hotel</td>
                   <td>Half Desert Terrain</td>
-                  <td id='d1'>30 mins</td>
+                  <td id='d1'></td>
                 </tr>
 
                 <tr style={{padding: '5px'}}>
                   <td>Half Desert Terain</td>
                   <td>Dubai Frame</td>
-                  <td id='d2'>40 mins</td>
+                  <td id='d2'></td>
                 </tr>
 
                 <tr style={{padding: '5px'}}>
                   <td>Dubai Frame</td>
                   <td>Nikki Beach</td>
-                  <td id='d3'>50 mins</td>
+                  <td id='d3'></td>
                 </tr>
 
                 <tr style={{padding: '5px'}}>
                   <td></td>
                   <td className="bold">Total</td>
-                  <td className="bold" id='total'>120 mins</td>
+                  <td className="bold" id='total'>s</td>
                 </tr>
 
               </table>
