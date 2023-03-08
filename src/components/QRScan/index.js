@@ -117,6 +117,10 @@ const QRScan = () =>{
       if(location.state.no === 3){
         document.getElementById('area').setAttribute('src','./Nikki Beach.png')
       } 
+      if(location.state.no === 4){
+        document.getElementById('area').setAttribute('src','./fire.png')
+      } 
+
       // eslint-disable-next-line
     },[])
 
